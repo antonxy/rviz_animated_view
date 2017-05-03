@@ -1,14 +1,11 @@
 <package>
-  <name>rviz_plugin_tutorials</name>
-  <version>0.10.1</version>
+  <name>rviz_animated_view</name>
+  <version>0.0.1</version>
   <description>
-     Tutorials showing how to write plugins for RViz.
+      Self rotating view
   </description>
-  <maintainer email="william@osrfoundation.org">William Woodall</maintainer>
-  <license>BSD</license>
-
-  <url>http://ros.org/wiki/rviz_plugin_tutorials</url>
-  <author>Dave Hershberger</author>
+  <maintainer email="schirg@fzi.de">Anton Schirg</maintainer>
+  <license>TODO</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 
@@ -21,7 +18,6 @@
   <run_depend>rviz</run_depend>
 
   <export>
-      <rosdoc config="${prefix}/rosdoc.yaml"/>
       <rviz plugin="${prefix}/plugin_description.xml"/>
   </export>
 </package>

@@ -4,7 +4,7 @@
 ##
 ## First start with some standard catkin stuff.
 cmake_minimum_required(VERSION 2.8.3)
-project(rviz_plugin_tutorials)
+project(rviz_animated_view)
 find_package(catkin REQUIRED COMPONENTS rviz)
 catkin_package()
 include_directories(${catkin_INCLUDE_DIRS})
@@ -34,11 +34,7 @@ add_definitions(-DQT_NO_KEYWORDS)
 ## Here we specify the list of source files.
 ## The generated MOC files are included automatically as headers.
 set(SRC_FILES
-  src/drive_widget.cpp
-  src/imu_display.cpp
-  src/imu_visual.cpp
-  src/plant_flag_tool.cpp
-  src/teleop_panel.cpp
+  src/animated_orbit_view_controller.cpp
 )
 
 ## An rviz plugin is just a shared library, so here we declare the
@@ -74,11 +70,3 @@ install(FILES
   plugin_description.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-install(DIRECTORY media/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/media)
-
-install(DIRECTORY icons/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/icons)
-
-install(PROGRAMS scripts/send_test_msgs.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

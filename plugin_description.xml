@@ -1,0 +1,9 @@
+<library path="lib/librviz_animated_view">
+  <class name="animated_view/AnimatedOrbit"
+         type="rviz_animated_view::AnimatedOrbitViewController"
+         base_class_type="rviz::ViewController">
+    <description>
+        Self rotating orbit view
+    </description>
+  </class>
+</library>
